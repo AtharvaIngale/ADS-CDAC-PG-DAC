@@ -5,16 +5,16 @@ import java.util.Scanner;
 public class Student_Stack {
 	
 	private int top;
-	private char arr[];
+	private Student_Class[] arr;
 	
 	public Student_Stack() {
 		top=-1;
-		arr = new char[10];
+		arr = new Student_Class[10];
 	}
 	
 	public Student_Stack(int size) {
 		top=-1;
-		arr = new char[size];
+		arr = new Student_Class[size];
 	}
 	
 	public boolean isFull() {
@@ -31,7 +31,7 @@ public class Student_Stack {
 			return false;
 	}
 	
-	public void push(char data) {
+	public void push(Student_Class data) {
 		if(isFull())
 			System.out.println("Stack overflow");
 		top++;
