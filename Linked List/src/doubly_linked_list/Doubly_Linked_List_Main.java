@@ -28,21 +28,26 @@ public class Doubly_Linked_List_Main {
 			case 1: System.out.println("Enter no of nodes to add: ");
 					data = sc.nextInt();
 					dll.add_To_Empty(data);
+					break;
 			
 			case 2: System.out.println("Enter value: ");
 					data = sc.nextInt();
 					dll.insert_first(data);
+					break;
 					
 			case 3: System.out.println("Enter value: ");
 					data = sc.nextInt();
 					dll.insert_last(data);
+					break;
 					
 			case 4: System.out.println("Enter value: ");
 					data = sc.nextInt();
 					System.out.println("Enter the position: ");
 					pos = sc.nextInt();
 					dll.insert_By_Pos(data, pos);
+					break;
 					
+			case 5: 
 					
 			
 			default:

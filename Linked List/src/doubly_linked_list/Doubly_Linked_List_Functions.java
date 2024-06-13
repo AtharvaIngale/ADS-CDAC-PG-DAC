@@ -150,9 +150,14 @@ public class Doubly_Linked_List_Functions {
 	}
 	
 	//To creating nodes by specifing the no. of nodes
-//	public int create_List(int no) {
-//		
-//	}
+	public int create_List(int no) {
+		int d = -999;
+		Doubly_Linked_List_Functions dll = new Doubly_Linked_List_Functions();
+		for(int i=1; i<= no; i++) {
+			dll.insert_first(i);
+		}
+		return d;
+	}
 
 	@Override
 	public String toString() {
