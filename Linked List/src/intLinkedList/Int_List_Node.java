@@ -2,8 +2,8 @@ package intLinkedList;
 
 public class Int_List_Node {
 	
-	private int data;
-	private Int_List_Node next;
+	public int data;
+	public Int_List_Node next;
 	
 	public Int_List_Node() {
 		data=0;
