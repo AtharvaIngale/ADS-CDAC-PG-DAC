@@ -1,5 +1,9 @@
 package doubly_linked_list;
 
+import java.util.Scanner;
+
+import intLinkedList.Int_List_Node;
+
 public class Doubly_Linked_List_Functions {
 	
 	private Doubly_Linked_List_Node head;
@@ -149,19 +153,33 @@ public class Doubly_Linked_List_Functions {
 		return d;
 	}
 	
-	//To creating nodes by specifing the no. of nodes
-	public int create_List(int no) {
+	//To creating nodes by specifying the no. of nodes
+	public void create_List(int no) {
+		Scanner sc = new Scanner(System.in);
 		int d = -999;
-		Doubly_Linked_List_Functions dll = new Doubly_Linked_List_Functions();
+		int data;
+		Doubly_Linked_List_Functions dll1 = new Doubly_Linked_List_Functions();
 		for(int i=1; i<= no; i++) {
-			dll.insert_first(i);
+			System.out.println("Enter value: ");
+			data = sc.nextInt();
+			dll1.insert_last(data);
 		}
-		return d;
+		return;
 	}
 
 	@Override
 	public String toString() {
-		return "Doubly_Linked_List_Functions [head=" + head + "]";
+		String str = new String();
+		if(head==null) {
+			return "List is empty..";
+		}
+		Doubly_Linked_List_Node itr = head;
+		str="list: ";
+		while(itr != null) {
+			str = str + " -> " + itr.getData();
+			itr=itr.getNext();
+		}
+		return str;
 	}
 	
 	

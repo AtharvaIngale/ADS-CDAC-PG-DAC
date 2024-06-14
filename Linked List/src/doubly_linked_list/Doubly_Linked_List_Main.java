@@ -47,13 +47,36 @@ public class Doubly_Linked_List_Main {
 					dll.insert_By_Pos(data, pos);
 					break;
 					
-			case 5: 
+			case 5: System.out.println("Deleting from first position");
+					System.out.println("Deleted: " + dll.delete_First());
+					break;
+			
+			case 6: System.out.println("Deleting from last position");
+					System.out.println("Deleted: " + dll.delete_Last());
+					break;
 					
+			case 7: System.out.println("Enter position to delete: ");
+					pos = sc.nextInt();
+					System.out.println("Deleting from pos " + pos + " value: " + dll.delete_By_Pos(pos));
+					break;
+					
+			case 8: System.out.println("Enter value");
+					data = sc.nextInt();
+					System.out.println("Adding value to empty linked list");
+					dll.add_To_Empty(data);
+					break;
+					
+			case 9: System.out.println("list: ");
+					System.out.println(dll);
+					break;
+					
+			case 10: System.out.println("Exiting....");
+					break;
 			
 			default:
 				throw new IllegalArgumentException("Unexpected value: " + ch);
 			}
-		}while(ch!=9);
+		}while(ch!=10);
 	}
 	
 }
