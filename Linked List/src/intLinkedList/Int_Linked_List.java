@@ -8,6 +8,15 @@ public class Int_Linked_List {
 		head = null;
 	}
 	
+	public Int_List_Node getHead() {
+		return head;
+	}
+
+	public void setHead(Int_List_Node head) {
+		this.head = head;
+	}
+
+
 	//Insert the node in first position
 	public void insertFirst(int d) {
 		Int_List_Node new_node = new Int_List_Node(d);
@@ -274,6 +283,8 @@ public class Int_Linked_List {
 		}
 		return slow;
 	}
+	
+	
 
 }
 

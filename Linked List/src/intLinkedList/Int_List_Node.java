@@ -31,6 +31,4 @@ public class Int_List_Node {
 		this.next = next;
 	}
 	
-	
-
 }
