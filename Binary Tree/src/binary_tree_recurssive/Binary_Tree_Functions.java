@@ -1,5 +1,8 @@
 package binary_tree_recurssive;
 
+import binary_tree_queue_using_linked_list.Binary_Tree_Queue_Using_Linked_List_Functions;
+import binary_tree_queue_using_linked_list.Binary_Tree_Queue_Using_Linked_List_Node;
+
 public class Binary_Tree_Functions {
 	
 	private Binary_Tree_Node root;
@@ -53,6 +56,46 @@ public class Binary_Tree_Functions {
 		postOrderTravasal(root.getLeft());
 		postOrderTravasal(root.getRight());
 		System.out.print(root.getData() + " -> ");
+	}
+	
+	//Levelwise insertion of nodes in binary tree
+	public void insert_levelwise(int d)
+	{
+		Binary_Tree_Node new_node = new Binary_Tree_Node(d);
+		if(root == null)
+		{
+			root = new_node;
+			return;
+		}
+		
+		Binary_Tree_Node iter = root;
+		Binary_Tree_Queue_Using_Linked_List_Functions  q = new Binary_Tree_Queue_Using_Linked_List_Functions();
+		q.enQueue(iter);
+		
+		
+		while(!q.isEmpty())
+		{
+			iter = q.deQueue();
+			
+			if(iter.getLeft()==null)
+			{
+				iter.setLeft(new_node);
+				return;
+			}
+			else
+			{
+				q.enQueue(iter.getLeft());
+			}
+			if(iter.getRight()==null)
+			{
+				iter.setRight(new_node);
+				return;
+			}
+			else
+			{
+				q.enQueue(iter.getRight());
+			}
+		}
 	}
 
 }
