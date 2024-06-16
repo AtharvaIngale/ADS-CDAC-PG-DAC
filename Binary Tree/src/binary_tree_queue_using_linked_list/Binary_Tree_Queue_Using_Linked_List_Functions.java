@@ -1,13 +1,17 @@
+//This class contains functions related to Binary Tree implementation in Queue using Linked List such as enQueue, deQueue and toString
+
 package binary_tree_queue_using_linked_list;
 
 public class Binary_Tree_Queue_Using_Linked_List_Functions {
 	
 	Binary_Tree_Queue_Using_Linked_List_Node front,rear;
 	 
+	//default constructor
 	 public Binary_Tree_Queue_Using_Linked_List_Functions()	 {
 		 front = rear = null;
 	 }
 	 
+	 //checks for empty queue
 	 public boolean isEmpty() {
 		 if(front == null)
 			 return true;
@@ -16,11 +20,10 @@ public class Binary_Tree_Queue_Using_Linked_List_Functions {
 	 }
 	 
 	 
-	 
-	 public void enQueue(int d) {
+	 //insert node in Binary Tree in a queue manner using linked list
+	 public void enQueue(int d)  {
 		 Binary_Tree_Queue_Using_Linked_List_Node new_node = new Binary_Tree_Queue_Using_Linked_List_Node(d);
-		 if(front== null)
-		 {
+		 if(front== null) {
 			 front = rear= new_node;
 			 return ;
 		 }
@@ -30,7 +33,7 @@ public class Binary_Tree_Queue_Using_Linked_List_Functions {
 		 return ;
 	 }
 	 
-	 
+	 //to delete the binary tree node from the front
 	 public int deQueue() {
 		 int d = -999;
 		 if(isEmpty())
@@ -41,9 +44,10 @@ public class Binary_Tree_Queue_Using_Linked_List_Functions {
 		 return d;
 	 }
 
-	@Override
-	public String toString() {
-		String str = new String();
+	
+	 //to print the nodes on the console
+	 public String toString() {
+	 	String str = new String();
 		if(isEmpty()) {
 			return "List is empty..";
 		}

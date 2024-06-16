@@ -6,6 +6,7 @@ import binary_tree_queue_using_linked_list.Binary_Tree_Queue_Using_Linked_List_N
 public class Binary_Tree_Functions {
 	
 	private Binary_Tree_Node root;
+	Binary_Tree_Queue_Using_Linked_List_Node front, rear;
 	
 	public Binary_Tree_Functions() {
 		root=null;
@@ -58,41 +59,63 @@ public class Binary_Tree_Functions {
 		System.out.print(root.getData() + " -> ");
 	}
 	
+	//checks for empty queue
+	public boolean isEmpty() {
+		if(front == null)
+			return true;
+		else
+			return false;		 
+	}
+		 
+		 
+	//insert node in Binary Tree in a queue manner using linked list
+	public void enQueue(int d)  {
+		Binary_Tree_Queue_Using_Linked_List_Node new_node = new Binary_Tree_Queue_Using_Linked_List_Node(d);
+		if(front== null) {
+			front = rear= new_node;
+				 return ;
+		}
+		rear.setNext(new_node);
+		rear= new_node;
+		//System.out.println(d);
+		return ;
+	}
+		 
+	//to delete the binary tree node from the front
+	public Binary_Tree_Node deQueue() {
+		Binary_Tree_Node d = null;
+		if(isEmpty())
+			return d;
+		d= front.getData();
+		front= front.getNext();
+		return d;
+	}
+		 
+		 
 	//Levelwise insertion of nodes in binary tree
-	public void insert_levelwise(int d)
-	{
+	public void insert_levelwise(int d)	{
 		Binary_Tree_Node new_node = new Binary_Tree_Node(d);
-		if(root == null)
-		{
+		if(root == null) {
 			root = new_node;
 			return;
-		}
-		
+		}		
 		Binary_Tree_Node iter = root;
-		Binary_Tree_Queue_Using_Linked_List_Functions  q = new Binary_Tree_Queue_Using_Linked_List_Functions();
-		q.enQueue(iter);
-		
-		
-		while(!q.isEmpty())
-		{
-			iter = q.deQueue();
-			
-			if(iter.getLeft()==null)
-			{
+		Binary_Tree_Functions  q = new Binary_Tree_Functions();
+		q.enQueue(iter);		
+		while(!q.isEmpty())	{
+			iter = q.deQueue();			
+			if(iter.getLeft()==null) {
 				iter.setLeft(new_node);
-				return;
+				return;b
 			}
-			else
-			{
+			else {
 				q.enQueue(iter.getLeft());
 			}
-			if(iter.getRight()==null)
-			{
+			if(iter.getRight()==null) {
 				iter.setRight(new_node);
 				return;
 			}
-			else
-			{
+			else {
 				q.enQueue(iter.getRight());
 			}
 		}
