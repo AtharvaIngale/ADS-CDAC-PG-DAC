@@ -1,7 +1,5 @@
 package binary_tree_queue_using_linked_list;
 
-import intLinkedList.Int_List_Node;
-
 public class Binary_Tree_Queue_Using_Linked_List_Functions {
 	
 	Binary_Tree_Queue_Using_Linked_List_Node front,rear;
@@ -10,18 +8,16 @@ public class Binary_Tree_Queue_Using_Linked_List_Functions {
 		 front = rear = null;
 	 }
 	 
-	 public boolean isEmpty()	 {
+	 public boolean isEmpty() {
 		 if(front == null)
 			 return true;
 		 else
-			 return false;
-		 
-		 
+			 return false;		 
 	 }
 	 
 	 
 	 
-	 public void enQueue(int d)	 {
+	 public void enQueue(int d) {
 		 Binary_Tree_Queue_Using_Linked_List_Node new_node = new Binary_Tree_Queue_Using_Linked_List_Node(d);
 		 if(front== null)
 		 {
@@ -35,7 +31,7 @@ public class Binary_Tree_Queue_Using_Linked_List_Functions {
 	 }
 	 
 	 
-	 public int deQueue()	 {
+	 public int deQueue() {
 		 int d = -999;
 		 if(isEmpty())
 			 return d;
