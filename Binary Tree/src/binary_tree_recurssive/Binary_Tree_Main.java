@@ -1,5 +1,7 @@
 package binary_tree_recurssive;
 
+import java.util.Scanner;
+
 public class Binary_Tree_Main {
 	
 	public static void main(String[] args) {
