@@ -152,6 +152,8 @@ public class Avl_Tree_Function {
 		return pptr;
 	}/*End of insert_LeftBalance( )*/
     
+	
+	//Balance the right side of avl tree
 	Avl_Tree_Node insert_RightBalance(Avl_Tree_Node pptr)
 	{
 		Avl_Tree_Node aptr, bptr;
@@ -192,6 +194,7 @@ public class Avl_Tree_Function {
 	}/*End of insert_RightBalance( )*/
 
 	
+	//Rotate the avl tree to right
 	Avl_Tree_Node RotateRight(Avl_Tree_Node pptr)
 	{
 		Avl_Tree_Node aptr;
@@ -213,7 +216,7 @@ public class Avl_Tree_Function {
 	}/*End of RotateRight( )*/
 	
 	
-	
+	//Rotate the avl tree to left
 	Avl_Tree_Node RotateLeft(Avl_Tree_Node pptr)
 	{
 		Avl_Tree_Node aptr;
@@ -233,6 +236,8 @@ public class Avl_Tree_Function {
 		return aptr;  /*A is the new root of the subtree initially rooted at P*/
 	}/*End of RotateLeft( )*/
 	
+	
+	//Traverse the tree level wise
 	void level_traverse()
 	{
 		Avl_Tree_Node ptr=root;
