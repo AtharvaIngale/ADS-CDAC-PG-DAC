@@ -322,7 +322,8 @@ public class Linked_List_All_Functions {
 	}
 
 	
-	public void findMiddle() { // tortoise and hare method  
+	// tortoise and hare method
+	public void findMiddle() {   
 		Int_List_Node slow,fast;
 		slow=fast=head;
 		// time complexity is O(n/2)
